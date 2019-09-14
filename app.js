@@ -1,43 +1,4 @@
-/* function joke() {
-	var request = new XMLHttpRequest();
-	var url = 'https://icanhazdadjoke.com/';
-
-	request.open('GET', url, true);
-	request.responseType = 'text';
-
-	request.onload = function joke() {
-		url.textContent = request.response;
-	};
-
-	request.send();
-
-	function newJoke(joke) {
-		var joke = document.getElementById(joke);
-		function onclick(joke) {
-			request.send();
-		}
-	}
-}
-function onclick(joke) {
-	request.send();
-}
-
-const userAction = async () => {
-	const response = await fetch('https://icanhazdadjoke.com/', {
-		method: 'POST',
-		body: myBody, // string or object
-		headers: {
-			'Content-Type': 'string'
-		}
-	});
-	const myJson = await response.json(); //extract JSON from the http response
-	// do something with myJson
-};
-let jokeArea = document.getElementById('joke-area');
-*/
-
-//fetch('https://icanhazdadjoke.com/').then((response) => response.json()).then((data) => console.log(data));
-
+// Dad Joke Array
 let dadJokes = [
 	"How man programmers does it take to change a light bulb? None, that's a hardware issue.",
 	"What's the object-oriented way of becoming wealthy? Inheritance.",
@@ -51,10 +12,9 @@ let dadJokes = [
 	'The computer is mightier than the pen, the sword, and usually, the programmer.'
 ];
 
-//let randomNumber = dadJokes[Math.floor(Math.random() * dadJokes.length + 1)];
-
 let dadButton = document.getElementById('joke-area');
 
+// Honestly don't know if this is needed. 
 dadButton.onclick = randomDad();
 
 function randomDad() {
@@ -62,6 +22,7 @@ function randomDad() {
 	dadButton.innerHTML = randomNumber;
 }
 
+// Cat Joke Array
 let catJokes = [
 	'How do two cats end a fight? They hiss and make up',
 	'How do you know a cat is agitated? He’s having a hissy fit!',
@@ -73,6 +34,7 @@ let catJokes = [
 
 let catButton = document.getElementById('joke-area');
 
+// Same as above.
 catButton.onclick = randomCat();
 
 function randomCat() {
